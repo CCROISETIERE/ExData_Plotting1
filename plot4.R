@@ -26,7 +26,7 @@ ylabel = "Energy sub metering"
 plot(data$stripdate, data$Sub_metering_1, type = "l",  xlab = xlabel, ylab = ylabel, ylim = c(0,35))
 points(data$stripdate, data$Sub_metering_2, type = "l", col = "red")
 points(data$stripdate, data$Sub_metering_3, type = "l", col = "blue")
-legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n")
+legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n", cex=0.7)
 
 #Plot D
 xlabel = "datetime"
@@ -36,3 +36,5 @@ plot(data$stripdate, data$Global_reactive_power, type = "l", xlab = xlabel, ylab
 #Copy to PNG
 dev.copy(png, file="plot4.png", width=480, height=480)
 dev.off()
+#Reset par
+par(mfrow=c(1,1))

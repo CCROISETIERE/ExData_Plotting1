@@ -31,7 +31,7 @@ legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_met
 #Plot D
 xlabel = "datetime"
 ylabel = "Global_reactive_power"
-plot(data$stripdate, data$Global_reactive_power, type = "l", xlab = xlabel, ylab = ylabel)
+plot(data$stripdate, as.numeric(as.character(data$Global_reactive_power)), type = "l", xlab = xlabel, ylab = ylabel)
 
 #Copy to PNG
 dev.copy(png, file="plot4.png", width=480, height=480)

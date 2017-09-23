@@ -8,7 +8,7 @@ data = subset(data, Date >= as.Date("2007-02-01") & Date <= as.Date("2007-02-02"
 xlabel = ""
 ylabel = "Global Active Power (kilowatts)"
 
-plot(data$stripdate, data$Global_active_power, type = "l", xlab = xlabel, ylab = ylabel)
+plot(data$stripdate, as.numeric(as.character(data$Global_active_power)), type = "l", xlab = xlabel, ylab = ylabel)
 
 #Copy to PNG
 dev.copy(png, file="plot2.png", width=480, height=480)

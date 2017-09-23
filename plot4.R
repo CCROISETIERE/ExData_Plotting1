@@ -13,12 +13,12 @@ par(mar=c(4,4,4,4))
 #Plot A
 xlabel = ""
 ylabel = "Global Active Power (kilowatts)"
-plot(data$stripdate, data$Global_active_power, type = "l", xlab = xlabel, ylab = ylabel)
+plot(data$stripdate, as.numeric(as.character(data$Global_active_power)), type = "l", xlab = xlabel, ylab = ylabel)
 
 #Plot B
 xlabel = "datetime"
 ylabel = "Voltage"
-plot(data$stripdate, data$Voltage, type = "l", xlab = xlabel, ylab = ylabel)
+plot(data$stripdate, as.numeric(as.character(data$Voltage)), type = "l", xlab = xlabel, ylab = ylabel)
 
 #Plot C
 xlabel = ""
